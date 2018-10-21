@@ -1,0 +1,24 @@
+{
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+          {
+            "name": "Comment",
+            "scope": [
+              "comment",
+              "comment.block",
+              "comment.block.documentation",
+              "comment.line",
+              "comment.line.double-slash",
+              "punctuation.definition.comment",
+            ],
+            "settings": {
+              "fontStyle": "bold",
+              "foreground": "#999"
+              // "fontStyle": "italic",
+              // "fontStyle": "italic underline",
+              // "fontStyle": "italic bold underline",
+            }
+          },
+        ]
+      },
+}

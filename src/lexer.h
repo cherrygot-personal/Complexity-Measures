@@ -44,4 +44,11 @@ unsigned int isFunction(struct Lexer *, const char *);
 
 void delLexer(struct Lexer *);
 
+struct Operator* createOperator(const char *, unsigned int);
+
+unsigned int addOperator(struct Operator **, unsigned int *, struct Operator *);
+
+struct Operand* createOperand(const char *, unsigned int);
+
+unsigned int addOperand(struct Operand **, unsigned int *, struct Operand *);
 #endif
