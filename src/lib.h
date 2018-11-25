@@ -9,4 +9,6 @@ unsigned int _isAlpha(const char);
 
 unsigned int _isDigit(const char);
 
+int strcmp(const char *, const char *);
+
 #endif

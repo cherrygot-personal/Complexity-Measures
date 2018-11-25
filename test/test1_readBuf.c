@@ -21,6 +21,7 @@ int main() {
         printf("buf: %s\n", clexer->buf);
 
         delLexer(clexer);
+        free(clexer);
     }
     
     return 0;

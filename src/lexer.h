@@ -28,19 +28,19 @@ unsigned int initLexer(struct Lexer *, const char *);
 
 unsigned int readBufFromFile(struct Lexer *, const char *);
 
-unsigned int parseCode(struct Lexer *);
+unsigned int lexify(struct Lexer *);
 
 unsigned int processWord(struct Lexer *);
 
 unsigned int processNum(struct Lexer *);
 
-unsigned int isOperator(struct Lexer *, const char *);
+unsigned int processStr(struct Lexer *);
 
-unsigned int isVariable(struct Lexer *, const char *);
+unsigned int processOpr(struct Lexer *);
 
-unsigned int isKeyword(struct Lexer *, const char *);
+unsigned int isKeyword(const char *);
 
-unsigned int isFunction(struct Lexer *, const char *);
+unsigned int isFunction(struct Lexer *, unsigned int);
 
 void delLexer(struct Lexer *);
 
@@ -48,7 +48,15 @@ struct Operator* createOperator(const char *, unsigned int);
 
 unsigned int addOperator(struct Operator **, unsigned int *, struct Operator *);
 
+unsigned int incOprCount(struct Lexer *, const char *);
+
 struct Operand* createOperand(const char *, unsigned int);
 
 unsigned int addOperand(struct Operand **, unsigned int *, struct Operand *);
+
+unsigned int incOpdCount(struct Lexer *, const char *);
+
+
+void escapeTill(struct Lexer *, const char);
+
 #endif
